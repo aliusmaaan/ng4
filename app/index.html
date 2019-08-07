@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>myCreightonApp</title>
+	<style type="text/css">
+
+	</style>
+	<link href="./css/main.css" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+</head>
+
+<body ng-app="myCreightonApp">
+	<div class="wrapper">
+		<header class="header" ng-controller="windowBackCtrl as ctrl">
+			<!-- Navigation bar -->
+			<nav role="navigation" class=" navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<div class="col-xs-2" ng-if="isMenu=='home.first'">
+						<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle pull-left">
+                            <div >
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                    </div>
+                    <div class="col-xs-2 head-Icons" ng-if="!(isMenu=='home.first' || isMenu=='main')" ng-click="ctrl.goback()">
+       <div>
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </div>
+                    </div>
+      <span class="text-center text-logo">MYCREIGHTON</span>
+      <div class="pull-right visible-xs head-Icons" ng-if="isMenu!='main'">
+         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      </div>
+      <div class="pull-right visible-xs head-Icons" ng-if="isMenu!='main'">
+         <span class="glyphicon glyphicon-search"></span>
+      </div>
+   </div>
+   </nav>
+   <!-- Collection of nav links and other content for toggling -->
+   <div id="navbarCollapse" class="collapse navbar-collapse text-left">
+      <ul class="nav navbar-nav">
+          <li class="menu-heading">MENU</li>
+         <li><a href="#link"><label>Library Search</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+         <li><a href="#link"><label>Where To Find It</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+         <li><a href="#link"><label>Campus Directory</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+         <li><a href="#link"><label>DoIt Services&amp;Support</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+         <li><a href="#link"><label>Academic Calendar</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+         <li><a href="#link"><label>Campus Map</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+         <li><a href="#link"><label>Notifications</label> <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+         <li><a href="#link"><span class="glyphicon glyphicon-search"></span></a></li>
+         <li><a href="#link"><span class="glyphicon glyphicon-question-sign"></span></a></li>
+      </ul>
+   </div>
+
+<!-- End of Navigation bar -->
+         </header>
+         <div ng-app="myCreightonApp" class="view-container">
+            <div ui-view class="slide-left"></div>
+         </div>
+         <footer class="footer">
+            <div class="container-fluid">
+               <p><a href="#Link">Site map </a> | <a href="#Link">Feedback</a></p>
+               <div class="row">
+                  <div class="col-xs-6">
+                     <p>Creighton University</p>
+                  </div>
+                  <div class="col-xs-6 text-small">
+                     <p>2500 California Plaza <br />
+                        Omaha, NE 68178<br />
+                        402.280.2700
+                     </p>
+                  </div>
+               </div>
+               <p>&copy; 2017 Creighton University</p>
+            </div>
+         </footer>
+      </div>
+      <script src="http://localhost:9001/webpack-dev-server.js"></script>
+      <script src="vendor.js"></script>
+      <script src="all.js"></script>
+   </body>
+</html>

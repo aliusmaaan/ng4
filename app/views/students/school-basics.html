@@ -1,0 +1,65 @@
+<!-- Content Section -->
+<div class="container-fluid">
+   <h4>School and semester</h4>
+   <div class="row">
+      <div class="col-xs-6">School basics</div>
+      <div class="col-xs-6">Semester start</div>
+   </div>
+   <div class="row">
+      <div class="col-xs-6">Academics, finances, life</div>
+      <div class="col-xs-6">Semester end</div>
+   </div>
+   <div class="row">
+      <div class="col-xs-6">Graduation</div>
+      <div class="col-xs-6">My service requests</div>
+   </div>
+   <div>
+       <input type="text" ng-model="homeCtrl.data.title" placeholder="Enter title">
+       <input type="text" ng-model="homeCtrl.data.body" placeholder="Enter Body">
+       <input type="number" ng-model="homeCtrl.data.userId" placeholder="Enter UserID">
+       <button ng-if="!homeCtrl.newitem" ng-click="homeCtrl.additem()" class="btn btn-info">Add New</button>
+       <button ng-if="homeCtrl.newitem" ng-click="homeCtrl.updateitem()" class="btn btn-info">Update</button>
+       <button ng-if="homeCtrl.newitem" ng-click="homeCtrl.deleteitem()" class="btn btn-danger">Delete</button>
+        <p>
+            New item is: 
+        </p>
+        <table ng-if="homeCtrl.newitem" class="table table-bordered">
+            <thaed>
+                <tr>
+                    <th>UserID</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+            </thaed>
+            <tbody>
+                <tr >
+                    <td>{{homeCtrl.newitem.userId}}</td>
+                    <td>{{homeCtrl.newitem.id}}</td>
+                    <td>{{homeCtrl.newitem.title}}</td>
+                    <td>{{homeCtrl.newitem.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+   </div>
+   <h4>students</h4>
+   <table class="table table-bordered">
+       <thaed>
+           <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Email</th>
+               <th>Phone</th>
+           </tr>
+       </thaed>
+       <tbody>
+           <tr ng-repeat="st in homeCtrl.items">
+               <td>{{st.id}}</td>
+               <td>{{st.name}}</td>
+               <td>{{st.email}}</td>
+               <td>{{st.phone}}</td>
+           </tr>
+       </tbody>
+   </table>
+</div>
+<!-- end of Content Section -->

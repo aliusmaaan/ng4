@@ -1,0 +1,39 @@
+<section>
+	<div class="container-fluid" ng-init="homeCtrl.save()">
+		<div class="row">
+			<div class="col-xs-12 form-group">
+				<a href="#link"><img src="/images/profile-pic.jpg" class="img-circle" width="40" alt="John J. Edward" /></a> <strong>John J. Edward</strong>				- Student
+				<a class="doller-icon pull-right" ng-click="showbucks=!showbucks"><img src="/images/doller-icon.jpg" alt="" /></a>
+			</div>
+
+		</div>
+		<div class="row animate-if" ng-if="showbucks">
+			<div class="col-xs-12">
+				<div class="well green-well">
+					<ul class="list-inline row  listflex text-center">
+						<li>
+							<div class="jbvalue">15</div>
+							<div class="jbText">SWIPES(SAT)</div>
+						</li>
+						<li>
+							<div class="jbvalue">5</div>
+							<div class="jbText">Guest</div>
+						</li>
+						<li>
+							<div class="jbvalue">$360.00</div>
+							<div class="jbText">DINING</div>
+						</li>
+						<li>
+							<div class="jbvalue">$750.25</div>
+							<div class="jbText">JAYBUCK$</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Content Section -->
+	<div ui-view></div>
+	<!-- end of Content Section -->
+
+	<section>

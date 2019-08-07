@@ -1,0 +1,24 @@
+
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <div class="form-input" >
+          <div ng-if="mainCtrl.wrongpassFlag" uib-alert class="alert-danger">Wrong Username/Password</div>
+         <form name="signup">
+           <div class="form-group"> <input name="username" type="text" class="form-control" placeholder="Net ID" ng-model="mainCtrl.user.name" /></div>
+          <div class="form-group"><input type="password" name="pass" class="form-control" placeholder="Password"  ng-model="mainCtrl.user.pass"/></div>
+          <div class="form-group text-center"><a  href="#" target="_blank">Forgot?</a></div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-raised btn-block" type="submit" ng-click="mainCtrl.login(mainCtrl.user.name, mainCtrl.user.pass)">Sign In</button>
+          </div>
+         </form>
+          
+        </div>
+      </div>
+    </div>
+    <script type="text/ng-template" id="alert.html">
+            <div ng-transclude></div>
+    </script>
+    
+<section>

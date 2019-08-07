@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+header {
+    background-color: #EBF0F2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.wrapper
+{
+    min-height:100%;
+    position:relative;   
+}
+
+.view-container{
+   padding-bottom:130px;
+}
+
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-container {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.image-container {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    height: 130px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+}
+/*Ruote slitder*/
+.slide-left.ng-enter,
+.slide-left.ng-leave {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+}
+
+.slide-left.ng-enter {
+  z-index: 101;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.slide-left.ng-enter.ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-left.ng-leave {
+  z-index: 100;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.slide-left.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+/*Ruote slitder end*/

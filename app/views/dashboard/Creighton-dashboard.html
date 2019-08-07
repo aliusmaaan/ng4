@@ -1,0 +1,87 @@
+<div class="container-fluid" id="studentDashboard">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="well white-well">
+				<ul class="list-inline listflex row">
+					<li style="vertical-align:top" class="text-center"><img src="/images/school-icon.jpg" alt="School & Semester" /></li>
+					<li>
+						<h4><a ui-sref="schoolandsemester">School &amp; Semester</a></h4>
+						<span>School Stuff I am responsible for.</span></li>
+				</ul>
+
+			</div>
+			<div class="well white-well">
+				<ul class="list-inline  row">
+					<li style="vertical-align:top" class="text-center"><img src="/images/classes-icon.jpg" alt="School & Semester" /></li>
+					<li>
+						<h4><a ui-sref="classes">Classes</a></h4>
+						<span>What I  need for each class.</span></li>
+				</ul>
+			</div>
+			<div class="well white-well">
+				<ul class="list-inline row">
+					<li style="vertical-align:top" class="text-center"><img src="/images/todo-icon.jpg" alt="School & Semester" /></li>
+					<li>
+						<h4><a ui-sref="toDo">To-Do List</a></h4>
+						<span>What I need to do.</span></li>
+				</ul>
+			</div>
+			<div class="well white-well">
+				<ul class="list-inline row">
+					<li style="vertical-align:top" class="text-center"><img src="/images/events-icon.jpg" alt="School & Semester" /></li>
+					<li>
+						<h4><a ui-sref="events">Next Events</a></h4>
+						<span>What I need to be ready for.</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div>
+		<input type="text" ng-model="homeCtrl.data.title" placeholder="Enter title">
+		<input type="text" ng-model="homeCtrl.data.body" placeholder="Enter Body">
+		<input type="number" ng-model="homeCtrl.data.userId" placeholder="Enter UserID">
+		<button ng-if="!homeCtrl.newitem" ng-click="homeCtrl.additem()" class="btn btn-info">Add New</button>
+		<button ng-if="homeCtrl.newitem" ng-click="homeCtrl.updateitem()" class="btn btn-info">Update</button>
+		<button ng-if="homeCtrl.newitem" ng-click="homeCtrl.deleteitem()" class="btn btn-danger">Delete</button>
+		<p>
+			New item is:
+		</p>
+		<table ng-if="homeCtrl.newitem" class="table table-bordered">
+			<thaed>
+				<tr>
+					<th>UserID</th>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Body</th>
+				</tr>
+			</thaed>
+			<tbody>
+				<tr>
+					<td>{{homeCtrl.newitem.userId}}</td>
+					<td>{{homeCtrl.newitem.id}}</td>
+					<td>{{homeCtrl.newitem.title}}</td>
+					<td>{{homeCtrl.newitem.body}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h4>students</h4>
+	<table class="table table-bordered">
+		<thaed>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+			</tr>
+		</thaed>
+		<tbody>
+			<tr ng-repeat="st in homeCtrl.items">
+				<td>{{st.id}}</td>
+				<td>{{st.name}}</td>
+				<td>{{st.email}}</td>
+				<td>{{st.phone}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

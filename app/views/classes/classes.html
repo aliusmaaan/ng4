@@ -1,0 +1,55 @@
+<section class="container-fluid" id="classes">
+    <div class="btn-group btn-group-justified calander-btns">
+        <a  class="btn btn-default">Today</a>
+        <a  class="btn btn-primary">Week</a>
+        <a  class="btn btn-default">List</a>
+        <a  class="btn btn-default">Current</a>
+    </div>
+<div class="row graybg">
+    <div class="col-xs-12">Monday</div>
+</div>
+        <div class="row" ng-class="{'classblue':$index==0, 'classgreen':$index==1}" data-ng-repeat="c in classCtrl.classes">
+            
+            <div class="col-xs-9">
+                <span class="font-12 gray-text" data-ng-bind="c.topic"></span> 
+            </div>
+            <div class="col-xs-3 text-right">
+                 <span class="font-12 gray-text" data-ng-bind="c.by"></span>
+            </div>
+            <div class="col-xs-8">
+                <h1 data-ng-bind="c.subject"></h1>
+            </div>
+            <div class="col-xs-4 text-right">
+                 <span class="font-12 gray-text" data-ng-bind="c.date"></span>
+            </div>
+            <div class="col-xs-6">
+                 <span class="font-12" data-ng-bind="c.location"></span>
+            </div>
+            <div class="col-xs-6 text-right">
+                 <span class="font-12" data-ng-bind="c.time"></span>
+            </div>
+        </div>
+        <div class="row" ng-class="{'classblue':$index==0, 'classgreen':$index==1}" data-ng-repeat="c in classCtrl.classes">
+            
+            <div class="col-xs-9">
+                <span class="font-12 gray-text" data-ng-bind="c.topic"></span>
+            </div>
+            <div class="col-xs-3 text-right">
+                 <span class="font-12 gray-text" data-ng-bind="c.by"></span>
+            </div>
+            <div class="col-xs-8">
+                <h1 data-ng-bind="c.subject"></h1>
+            </div>
+            <div class="col-xs-4 text-right">
+                 <span class="font-12 gray-text" data-ng-bind="c.date"></span>
+            </div>
+            <div class="col-xs-6">
+                 <span class="font-12" data-ng-bind="c.location"></span>
+            </div>
+            <div class="col-xs-6 text-right">
+                 <span class="font-12" data-ng-bind="c.time"></span>
+            </div>
+        </div>
+       
+
+<section>

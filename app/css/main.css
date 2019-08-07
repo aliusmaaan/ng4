@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+h1,h2,h3,h4,h5, .h1,.h2,.h3,.h4,.h5
+{
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+header {
+    background-color: #0054a6;
+    text-align: center;
+    border-top: 1px solid #5680a9;
+    border-bottom: 1px solid #7fa9d2;
+}
+.header .navbar-default
+{
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 0;
+}
+.header .text-logo
+{
+    line-height: 48px;
+    color: #fff;
+    font-weight: bold;
+}
+.head-Icons
+{
+    font-size: 18px;
+    color: #fff;
+    line-height: 48px;
+    margin-right: 15px;
+}
+.header .navbar-toggle
+{
+    padding:0;
+    margin-top:15px;
+}
+.header  .navbar-default .navbar-toggle
+{
+    border: 0;
+}
+.header .navbar-default .navbar-toggle:hover, .header .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+.header .navbar-default .navbar-toggle .icon-bar
+{
+    background-color: #fff;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 6px;
+}
+.header .navbar-collapse
+{
+    background-color: #fff;
+}
+.header .menu-heading
+{
+        padding: 10px 15px;
+}
+.nav > li 
+{
+    border-bottom:1px solid #e3e3e5;
+}
+.header .navbar-nav
+{
+    margin-top:0;
+}
+.wrapper
+{
+    min-height:100%;
+    position:relative;   
+}
+
+.view-container{
+   padding-bottom:130px;
+}
+
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-container {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.image-container {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    height: 130px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+}
+.well.green-well{
+    padding: 8px 15px 2px;
+    background-color: #f1f8ef;
+    border:1px solid #b2d8aa;
+    overflow: hidden;
+}
+.well.white-well{
+    padding: 8px 15px;
+    background-color: #fff;
+    border:1px solid #7fa9d2;
+    overflow: hidden;
+}
+.doller-icon
+{
+    margin-top: 4px;
+}
+/*Ruote slitder*/
+.slide-left.ng-enter,
+.slide-left.ng-leave {
+    position: absolute;
+    right: 0;
+    left: 0;
+    -webkit-transition: -webkit-transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
+}
+
+.slide-left.ng-enter {
+    z-index: 101;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.slide-left.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-left.ng-leave {
+    z-index: 100;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.slide-left.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+/*Ruote slitder end*/ 
+
+.jbvalue {
+    color:#73b865;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+}
+.jbText {
+    color:#878787;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+.marginZero
+{
+    margin:0;
+}
+ul.listflex{
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    margin-bottom: 0;
+}
+#studentDashboard h4{
+    padding: 0;
+    margin: 0;
+}
+
+.classblue{
+    background: #fff;
+    border-left: 6px solid #019cdb;
+    border-bottom: 1px solid #e3e3e5;
+}
+.classblue h1
+{
+    color: #019cdb;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.classgreen{
+    background: #fff;
+    border-left: 6px solid #73b865;
+    border-bottom: 1px solid #e3e3e5;
+}
+.classgreen h1
+{
+    color: #73b865;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.graybg
+{
+    background-color: #eaeaea;
+}
+.gray-text
+{
+    color: #a5a5a5;
+}
+.font-12
+{
+    font-size: 12px;
+}
+.calander-btns
+{
+    margin-bottom: 10px;
+}
+.calander-btns a
+{
+    
+    border-color: #019cdb;
+    border-collapse: collapse;
+
+}
+
+.calander-btns  .btn-primary {
+    color: #fff;
+    background-color: #019cdb;
+    border-color: #019cdb;
+}
+#classes .classblue h1, #classes .classgreen h1, #classes .classblue span, #classes .classgreen span{
+    margin-top:4px;
+    margin-bottom: 4px;
+    display: block;
+}
+/* Student Details */
+#studentDetails .list-group
+{
+    margin-top:20px;
+}
+
+#studentDetails .list-group-item:first-child, #studentDetails .list-group-item:last-child
+{   
+    border-radius: 0;
+    -moz-border-radius:0;
+    -webkit-border-radius:0
+}
+#studentDetails  a.list-group-item, #studentDetails  button.list-group-item, #studentDetails  .list-group-item label
+{
+      color:#0054a6;
+      font-weight: normal;
+}
+a{
+    color:#0054a6;
+}
+a:hover{
+    color:#0054a6;
+}
