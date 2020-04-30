@@ -2,7 +2,7 @@
   "name": "mycreightonapp",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "bootstrap": "3.3.7",
     "angular": "1.5",
     "angular-sanitize": "1.5",
